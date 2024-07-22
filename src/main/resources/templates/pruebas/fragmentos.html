@@ -155,6 +155,27 @@
                         </div>
                     </form>
                 </div>
+                <div class="col-md-3">
+                    <form method="POST" th:action="@{/pruebas/query4}" 
+                          class="was-validated">
+                        <div class="card">                            
+                            <div class="card-body">
+                                
+                                <div class="mb-3">
+                                    <label for="precioSupIgual">[[#{pruebas.precio.superioroigual}]]</label>
+                                    <input type="number" class="form-control" 
+                                           th:value="${precioSupIgual}"
+                                           th:name="precioSupIgual" required="true"/>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fas fa-check"></i> [[#{pruebas.ampliadas}]]
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section> 
     </body>

@@ -26,4 +26,7 @@ public interface ProductoService {
     
     //Lista de productos utilizando consultas con SQL Nativo
     public List<Producto> metodoNativo(double precioInf, double precioSup);
+    
+    //Tarea#4
+    public List<Producto> findByPrecioGreaterThanEqual(double precioSupIgual);
 }

@@ -81,5 +81,14 @@ public class PruebasController {
         model.addAttribute("precioSup", precioSup);
         return "/pruebas/listado2";
     }
+    
+    @PostMapping("/query4")
+    public String consultaQuery4(@RequestParam(value = "precioSupIgual") double precioSupIgual, Model model) {
+        var productos = productoService.findByPrecioGreaterThanEqual(precioSupIgual);
+        model.addAttribute("productos", productos);
+        model.addAttribute("totalProductos", productos.size());
+        model.addAttribute("precioSupIgual", precioSupIgual);
+        return "/pruebas/listado2";
+    }
 
 }
